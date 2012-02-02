@@ -1,0 +1,50 @@
+1 ICON "DirectX.ico"
+    
+SeparableSSS.fx RCDATA Shaders\SeparableSSS.fx
+SeparableSSS.h RCDATA "..\\SeparableSSS.h"
+
+SMAA.fx RCDATA Shaders\SMAA.fx
+SMAA.h RCDATA Shaders\SMAA.h
+
+Bloom.fx RCDATA Shaders\Bloom.fx
+FilmGrain.fx RCDATA Shaders\FilmGrain.fx
+DepthOfField.fx RCDATA Shaders\DepthOfField.fx
+Main.fx RCDATA Shaders\Main.fx
+ShadowMap.fx RCDATA Shaders\ShadowMap.fx
+SkyDome.fx RCDATA Shaders\SkyDome.fx
+
+Head\Head.sdkmesh RCDATA Media\Head\Head.sdkmesh
+Head\DiffuseMap.dds RCDATA Media\Head\DiffuseMap.dds
+Head\NormalMap.dds RCDATA Media\Head\NormalMap.dds
+Head\SpecularAOMap.dds RCDATA Media\Head\SpecularAOMap.dds
+
+Enviroment\StPeters\SkyDome.sdkmesh RCDATA Media\Enviroment\StPeters\SkyDome.sdkmesh
+Enviroment\StPeters\DiffuseMap.dds RCDATA Media\Enviroment\StPeters\DiffuseMap.dds
+Enviroment\StPeters\IrradianceMap.dds RCDATA Media\Enviroment\StPeters\IrradianceMap.dds
+Enviroment\Grace\SkyDome.sdkmesh RCDATA Media\Enviroment\Grace\SkyDome.sdkmesh
+Enviroment\Grace\DiffuseMap.dds RCDATA Media\Enviroment\Grace\DiffuseMap.dds
+Enviroment\Grace\IrradianceMap.dds RCDATA Media\Enviroment\Grace\IrradianceMap.dds
+Enviroment\Eucalyptus\SkyDome.sdkmesh RCDATA Media\Enviroment\Eucalyptus\SkyDome.sdkmesh
+Enviroment\Eucalyptus\DiffuseMap.dds RCDATA Media\Enviroment\Eucalyptus\DiffuseMap.dds
+Enviroment\Eucalyptus\IrradianceMap.dds RCDATA Media\Enviroment\Eucalyptus\IrradianceMap.dds
+
+BeckmannMap.dds RCDATA Media\BeckmannMap.dds
+SmallTitles.dds RCDATA Media\SmallTitles.dds
+BigTitles.dds RCDATA Media\BigTitles.dds
+Noise.dds RCDATA Media\Noise.dds
+Background.png RCDATA Media\Background.png
+
+Help.txt RCDATA Media\Help.txt
+
+Music.xwm WAV Media\Music.xwm
+
+Preset0.txt RCDATA "Media\\Presets\\Preset0.txt"
+Preset1.txt RCDATA "Media\\Presets\\Preset1.txt"
+Preset2.txt RCDATA "Media\\Presets\\Preset2.txt"
+Preset3.txt RCDATA "Media\\Presets\\Preset3.txt"
+Preset4.txt RCDATA "Media\\Presets\\Preset4.txt"
+Preset5.txt RCDATA "Media\\Presets\\Preset5.txt"
+Preset6.txt RCDATA "Media\\Presets\\Preset6.txt"
+Preset7.txt RCDATA "Media\\Presets\\Preset7.txt"
+Preset8.txt RCDATA "Media\\Presets\\Preset8.txt"
+Preset9.txt RCDATA "Media\\Presets\\Preset9.txt"

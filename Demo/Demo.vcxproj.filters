@@ -1,0 +1,206 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="DXUT">
+      <UniqueIdentifier>{37b64c45-a08f-4fe9-af50-45c5c2f603fc}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Shaders">
+      <UniqueIdentifier>{509ace0a-bd70-4611-b1f1-a99d4866a35d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Headers">
+      <UniqueIdentifier>{f43f35c7-2c90-4e14-92ff-e9c6d7c1a952}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source">
+      <UniqueIdentifier>{edba3141-f6d2-48e7-94af-3edeedb2c126}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source\Support">
+      <UniqueIdentifier>{34390a93-39d2-489a-9555-1415e8ab81d6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Headers\Support">
+      <UniqueIdentifier>{915892a5-f2e0-4fff-bcd1-9256c432b06d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Shaders\Support">
+      <UniqueIdentifier>{14db4bca-5f23-4b23-b2a1-1bf48ecad710}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="DXUT\Core\DXUT.cpp">
+      <Filter>DXUT</Filter>
+    </ClCompile>
+    <ClCompile Include="DXUT\Optional\DXUTcamera.cpp">
+      <Filter>DXUT</Filter>
+    </ClCompile>
+    <ClCompile Include="DXUT\Core\DXUTenum.cpp">
+      <Filter>DXUT</Filter>
+    </ClCompile>
+    <ClCompile Include="DXUT\Optional\DXUTgui.cpp">
+      <Filter>DXUT</Filter>
+    </ClCompile>
+    <ClCompile Include="DXUT\Core\DXUTmisc.cpp">
+      <Filter>DXUT</Filter>
+    </ClCompile>
+    <ClCompile Include="DXUT\Optional\DXUTres.cpp">
+      <Filter>DXUT</Filter>
+    </ClCompile>
+    <ClCompile Include="DXUT\Optional\DXUTsettingsdlg.cpp">
+      <Filter>DXUT</Filter>
+    </ClCompile>
+    <ClCompile Include="DXUT\Optional\SDKmesh.cpp">
+      <Filter>DXUT</Filter>
+    </ClCompile>
+    <ClCompile Include="DXUT\Optional\SDKmisc.cpp">
+      <Filter>DXUT</Filter>
+    </ClCompile>
+    <ClCompile Include="Code\Demo.cpp">
+      <Filter>Source</Filter>
+    </ClCompile>
+    <ClCompile Include="Code\Support\SkyDome.cpp">
+      <Filter>Source\Support</Filter>
+    </ClCompile>
+    <ClCompile Include="Code\Support\SplashScreen.cpp">
+      <Filter>Source\Support</Filter>
+    </ClCompile>
+    <ClCompile Include="Code\Support\Timer.cpp">
+      <Filter>Source\Support</Filter>
+    </ClCompile>
+    <ClCompile Include="Code\Support\Bloom.cpp">
+      <Filter>Source\Support</Filter>
+    </ClCompile>
+    <ClCompile Include="Code\Support\Camera.cpp">
+      <Filter>Source\Support</Filter>
+    </ClCompile>
+    <ClCompile Include="Code\Support\Fade.cpp">
+      <Filter>Source\Support</Filter>
+    </ClCompile>
+    <ClCompile Include="Code\Support\RenderTarget.cpp">
+      <Filter>Source\Support</Filter>
+    </ClCompile>
+    <ClCompile Include="Code\Support\ShadowMap.cpp">
+      <Filter>Source\Support</Filter>
+    </ClCompile>
+    <ClCompile Include="DXUT\Optional\SDKwavefile.cpp">
+      <Filter>DXUT</Filter>
+    </ClCompile>
+    <ClCompile Include="Code\SeparableSSS.cpp">
+      <Filter>Source</Filter>
+    </ClCompile>
+    <ClCompile Include="Code\Support\DepthOfField.cpp">
+      <Filter>Source\Support</Filter>
+    </ClCompile>
+    <ClCompile Include="Code\Support\SMAA.cpp">
+      <Filter>Source\Support</Filter>
+    </ClCompile>
+    <ClCompile Include="Code\Support\FilmGrain.cpp">
+      <Filter>Source\Support</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="DXUT\Core\DXUT.h">
+      <Filter>DXUT</Filter>
+    </ClInclude>
+    <ClInclude Include="DXUT\Optional\DXUTcamera.h">
+      <Filter>DXUT</Filter>
+    </ClInclude>
+    <ClInclude Include="DXUT\Core\DXUTenum.h">
+      <Filter>DXUT</Filter>
+    </ClInclude>
+    <ClInclude Include="DXUT\Optional\DXUTgui.h">
+      <Filter>DXUT</Filter>
+    </ClInclude>
+    <ClInclude Include="DXUT\Core\DXUTmisc.h">
+      <Filter>DXUT</Filter>
+    </ClInclude>
+    <ClInclude Include="DXUT\Optional\DXUTres.h">
+      <Filter>DXUT</Filter>
+    </ClInclude>
+    <ClInclude Include="DXUT\Optional\DXUTsettingsdlg.h">
+      <Filter>DXUT</Filter>
+    </ClInclude>
+    <ClInclude Include="DXUT\Optional\SDKmesh.h">
+      <Filter>DXUT</Filter>
+    </ClInclude>
+    <ClInclude Include="DXUT\Optional\SDKmisc.h">
+      <Filter>DXUT</Filter>
+    </ClInclude>
+    <ClInclude Include="Code\Support\RenderTarget.h">
+      <Filter>Headers\Support</Filter>
+    </ClInclude>
+    <ClInclude Include="Code\Support\ShadowMap.h">
+      <Filter>Headers\Support</Filter>
+    </ClInclude>
+    <ClInclude Include="Code\Support\SkyDome.h">
+      <Filter>Headers\Support</Filter>
+    </ClInclude>
+    <ClInclude Include="Code\Support\SplashScreen.h">
+      <Filter>Headers\Support</Filter>
+    </ClInclude>
+    <ClInclude Include="Code\Support\Timer.h">
+      <Filter>Headers\Support</Filter>
+    </ClInclude>
+    <ClInclude Include="Code\Support\Animation.h">
+      <Filter>Headers\Support</Filter>
+    </ClInclude>
+    <ClInclude Include="Code\Support\Bloom.h">
+      <Filter>Headers\Support</Filter>
+    </ClInclude>
+    <ClInclude Include="Code\Support\Camera.h">
+      <Filter>Headers\Support</Filter>
+    </ClInclude>
+    <ClInclude Include="Code\Support\Fade.h">
+      <Filter>Headers\Support</Filter>
+    </ClInclude>
+    <ClInclude Include="DXUT\Optional\SDKwavefile.h">
+      <Filter>DXUT</Filter>
+    </ClInclude>
+    <ClInclude Include="Code\SeparableSSS.h">
+      <Filter>Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="..\SeparableSSS.h">
+      <Filter>Shaders</Filter>
+    </ClInclude>
+    <ClInclude Include="Code\Support\DepthOfField.h">
+      <Filter>Headers\Support</Filter>
+    </ClInclude>
+    <ClInclude Include="Code\Support\SMAA.h">
+      <Filter>Headers\Support</Filter>
+    </ClInclude>
+    <ClInclude Include="Shaders\SMAA.h">
+      <Filter>Shaders\Support</Filter>
+    </ClInclude>
+    <ClInclude Include="Code\Support\FilmGrain.h">
+      <Filter>Headers\Support</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="Shaders\SeparableSSS.fx">
+      <Filter>Shaders</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Shaders\SkyDome.fx">
+      <Filter>Shaders\Support</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Shaders\Bloom.fx">
+      <Filter>Shaders\Support</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Shaders\Main.fx">
+      <Filter>Shaders\Support</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Shaders\ShadowMap.fx">
+      <Filter>Shaders\Support</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Shaders\DepthOfField.fx">
+      <Filter>Shaders\Support</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Shaders\FilmGrain.fx">
+      <Filter>Shaders\Support</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Shaders\SMAA.fx">
+      <Filter>Shaders\Support</Filter>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Media\Help.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="Demo.rc" />
+  </ItemGroup>
+</Project>

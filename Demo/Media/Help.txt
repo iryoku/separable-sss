@@ -1,0 +1,48 @@
+Hi, welcome to our SSS demo! 
+
+Here you'll find what hopefully will be useful information for gamedevs and artists, including what subsurface
+scattering (SSS) is, what the parameters are, as well as some useful tips to achieve the highest realism possible out
+of the shader. Most of the info here is basic stuff but I'd like to give a quick summary anyway.
+
+First of all, lets explain what Subsurface Scattering is. It's a process in which light falling onto an object enters
+its body at one point, scatters within it, then exits the object at some other point. This process happens in skin, and
+has a vital importance in its visual appearance. In an object without subsurface scattering such as a rock, the light
+doesn't enter the object, so the entry and exit point are the very same. Ok, now for lets go with the most relevant
+controls on the right, from top to bottom. But before that, please take into account that besides the controls, the
+alpha channel of the diffuse map can be used to modulate how strong is the SSS effect in each zone of the face.
+
+The first one is 'Separate Speculars'. When light hits the surface of the skin, a percentage of it just reflects
+(speculars), while other manages to get inside of the skin, and scatters within it. So, this means that SSS only 
+happens in the diffuse component of the lighting. In some cases, it may be too expensive to store the diffuse and
+specular components separately, and thus subsurface scattering must be applied to both, which still yields very 
+realistic results despite not being a perfect solution. Having separate speculars allows to apply SSS only to the
+diffuse component, as happens in the real world.
+
+You may want to enable/disable 'SSS rendering', or to simply push S, to enable/disable the filter effects, and see how
+important is to simulate SSS. Notice how SSS depends on the lighting configuration, which rules out precalculation.
+
+The light diffusion produced by the SSS mechanism should occur on the surface of the object, not in a screen oriented
+plane. Enabling 'Follow Surface' will ensure that diffusion is correctly calculated, at the expense of more memory
+accesses.
+
+Now, to the parameters that control the SSS filter:
+1) SSS Width: specifies the global level of subsurface scattering, or in other words, the width of the filter.
+2) SSS Strength: specifies the how much of the diffuse light gets into the skin, and thus gets modified by the SSS
+mechanism. It can be seen as a per-channel mix factor between the original image, and the SSS filtered image.
+3) SSS Falloff: defines the per-channel falloff of the gradients produced by the subsurface scattering events. It can
+be used to fine tune the color of the gradients.
+4) SSS Translucency: controls the translucency of thin slabs like the ears or nose.
+
+The specular controls on the left, are exposed to showcase the potential of the Kelemen/Szirmay-Kalos model used the
+specular component. Physically accurate speculars like these are crucial for believable skin. Playing with the
+roughness you can make the face to look sweaty. Note that these parameters are global tweaks, they are already changing
+over the face (for example, to make speculars stronger on the forehead).
+
+Finally, the 'Bumpiness' control is exposed to showcase the huge importance of a proper normal map. Notice that without
+bumps, what SSS does is just to colorize the gradients in the shadows and shading boundaries. Properly crafted normal
+maps make for most of the realism obtained with SSS shaders. Also, remember that SSS softens the bumps, and thus they
+must be designed much more sharper than what an artist would usually do if SSS was not available. My recommendation is
+to take a look into the scanned normal map included in the demo, and use it as reference for developing bump maps with
+the proper appearance. Bump tiling can be used when using high resolution maps isn't a possibility. It's also worth
+noting that the albedo is blurred with the lighting, so it should also be stronger than usual (using "Smart Sharpen"
+in Photoshop works fine).

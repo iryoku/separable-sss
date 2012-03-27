@@ -737,12 +737,21 @@ bool setupIntro(float t) {
 }
 
 
-void CALLBACK onFrameRender(ID3D10Device *device, double time, float elapsedTime, void *context) {
+void reset() {
     HRESULT hr;
 
-    if (t0 == numeric_limits<double>::min()) {
+    loadPreset(9);
+    camera.setDistanceVelocity(0.0f);
+    camera.setPanVelocity(D3DXVECTOR2(0.0f, 0.0f));
+    setExposure(2.0f);
+    V(mainEffect->GetVariableByName("specularRoughness")->AsScalar()->SetFloat(0.3f));
+    V(mainEffect->GetVariableByName("specularIntensity")->AsScalar()->SetFloat(1.88f));
+}
+
+
+void CALLBACK onFrameRender(ID3D10Device *device, double time, float elapsedTime, void *context) {
+    if (t0 == numeric_limits<double>::min())
         t0 = time;
-    }
     if (tFade == numeric_limits<double>::max() && skipIntro)
         tFade = time;
 
@@ -794,12 +803,7 @@ void CALLBACK onFrameRender(ID3D10Device *device, double time, float elapsedTime
                t0 = time;
 
                // Reset the scene:
-               loadPreset(9);
-               camera.setDistanceVelocity(0.0f);
-               camera.setPanVelocity(D3DXVECTOR2(0.0f, 0.0f));
-               setExposure(2.0f);
-               V(mainEffect->GetVariableByName("specularRoughness")->AsScalar()->SetFloat(0.3f));
-               V(mainEffect->GetVariableByName("specularIntensity")->AsScalar()->SetFloat(1.88f));
+               reset();
                break;
             }
             break;
@@ -1136,7 +1140,11 @@ HRESULT CALLBACK onResizedSwapChain(ID3D10Device *device, IDXGISwapChain *swapCh
     helpHud.GetButton(IDC_HELP_CLOSE_BUTTON)->SetLocation(desc->Width - (45 + HUD_WIDTH) + 35, 10);
 
     if (!loaded) {
+        #if INTRO_BUILD == 1
         loadPreset(0);
+        #else
+        loadPreset(9);
+        #endif
         loaded = true;
     }
 

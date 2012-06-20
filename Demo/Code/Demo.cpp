@@ -347,7 +347,7 @@ void mainPass(ID3D10Device *device) {
         device->ClearDepthStencilView(*depthStencilMS, D3D10_CLEAR_DEPTH | D3D10_CLEAR_STENCIL, 1.0, 0);
         device->ClearRenderTargetView(*mainRTMS, clearColor);
         device->ClearRenderTargetView(*depthRTMS, clearColor);
-		device->ClearRenderTargetView(*specularsRTMS, clearColor);
+        device->ClearRenderTargetView(*specularsRTMS, clearColor);
 
         ID3D10RenderTargetView *rt[] = { *mainRTMS, *depthRTMS, *velocityRTMS, *specularsRTMS };
         device->OMSetRenderTargets(4, rt, *depthStencilMS);
@@ -355,7 +355,7 @@ void mainPass(ID3D10Device *device) {
         device->ClearDepthStencilView(*depthStencil, D3D10_CLEAR_DEPTH | D3D10_CLEAR_STENCIL, 1.0, 0);
         device->ClearRenderTargetView(*mainRT, clearColor);
         device->ClearRenderTargetView(*depthRT, clearColor);
-		device->ClearRenderTargetView(*specularsRT, clearColor);
+        device->ClearRenderTargetView(*specularsRT, clearColor);
         device->ClearRenderTargetView(*velocityRT, clearColor);
 
         ID3D10RenderTargetView *rt[] = { *mainRT, *depthRT, *velocityRT, *specularsRT };

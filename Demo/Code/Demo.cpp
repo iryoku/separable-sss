@@ -347,23 +347,19 @@ void mainPass(ID3D10Device *device) {
         device->ClearDepthStencilView(*depthStencilMS, D3D10_CLEAR_DEPTH | D3D10_CLEAR_STENCIL, 1.0, 0);
         device->ClearRenderTargetView(*mainRTMS, clearColor);
         device->ClearRenderTargetView(*depthRTMS, clearColor);
-        if (mainHud.GetCheckBox(IDC_SEPARATE_SPECULARS)->GetChecked())
-            device->ClearRenderTargetView(*specularsRTMS, clearColor);
+        device->ClearRenderTargetView(*specularsRTMS, clearColor);
 
         ID3D10RenderTargetView *rt[] = { *mainRTMS, *depthRTMS, *velocityRTMS, *specularsRTMS };
-        int n = mainHud.GetCheckBox(IDC_SEPARATE_SPECULARS)->GetChecked()? 4 : 3;
-        device->OMSetRenderTargets(n, rt, *depthStencilMS);
+        device->OMSetRenderTargets(4, rt, *depthStencilMS);
     } else {
         device->ClearDepthStencilView(*depthStencil, D3D10_CLEAR_DEPTH | D3D10_CLEAR_STENCIL, 1.0, 0);
         device->ClearRenderTargetView(*mainRT, clearColor);
         device->ClearRenderTargetView(*depthRT, clearColor);
-        if (mainHud.GetCheckBox(IDC_SEPARATE_SPECULARS)->GetChecked())
-            device->ClearRenderTargetView(*specularsRT, clearColor);
+        device->ClearRenderTargetView(*specularsRT, clearColor);
         device->ClearRenderTargetView(*velocityRT, clearColor);
 
         ID3D10RenderTargetView *rt[] = { *mainRT, *depthRT, *velocityRT, *specularsRT };
-        int n = mainHud.GetCheckBox(IDC_SEPARATE_SPECULARS)->GetChecked()? 4 : 3;
-        device->OMSetRenderTargets(n, rt, *depthStencil);
+        device->OMSetRenderTargets(4, rt, *depthStencil);
     }
 
     // Heads rendering:

@@ -855,9 +855,10 @@ void setupSSS(ID3D10Device *device, const DXGI_SURFACE_DESC *desc) {
     int nSamples = std::max(3, 2 * (int(value) / 2) + 1);
     bool stencilInitialized = currentMode().desc.Count == 1;
     bool followSurface = mainHud.GetCheckBox(IDC_FOLLOW_SURFACE)->GetChecked();
+    DXGI_FORMAT format = mainHud.GetCheckBox(IDC_HDR)->GetChecked()? DXGI_FORMAT_R16G16B16A16_FLOAT : DXGI_FORMAT_R8G8B8A8_UNORM_SRGB;
 
     SAFE_DELETE(separableSSS);
-    separableSSS = new SeparableSSS(device, desc->Width, desc->Height, CAMERA_FOV, sssLevel, nSamples, stencilInitialized, followSurface, true, DXGI_FORMAT_R8G8B8A8_UNORM_SRGB);
+    separableSSS = new SeparableSSS(device, desc->Width, desc->Height, CAMERA_FOV, sssLevel, nSamples, stencilInitialized, followSurface, true, format);
 
     smaa = new SMAA(device, desc->Width, desc->Height, SMAA::PRESET_HIGH, true, true);
 
